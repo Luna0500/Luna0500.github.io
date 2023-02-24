@@ -1,0 +1,14 @@
+/* Home button CSS thanks to https://www.clickminded.com/button-generator/ */
+.homeButton {
+    background:    #351c75;
+    background:    linear-gradient(#0b5394, #351c75 50%, #0b5394);
+    border:        3px solid #3d85c6;
+    border-radius: 8px;
+    box-shadow:    3px 3px #ea9999;
+    padding:       20px 45px;
+    color:         #00ffff;
+    display:       inline-block;
+    font:          italic bold 28px/1 "Komika", cursive;
+    text-align:    center;
+    text-shadow:   3px 3px #9900ff;
+}
