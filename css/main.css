@@ -18,14 +18,14 @@
 /* Style the links inside the navigation bar */
 .menu a {
     float: left;
-    color: #f2f2f2;
+    color: var(--LightBlueGrey);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
 
-.menu a:link {
+.menu a:link, .menu a:visited{
     color: var(--LightBlueGrey);
 }
 
