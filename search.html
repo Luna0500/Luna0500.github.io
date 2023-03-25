@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Advanced Search</title>
+  <style>
+  </style>
+</head>
+<body>
+<div class="menu">
+  <a href="index.html">Home</a>
+  <a href="inspire.html">Inspire</a>
+  <a href="amuse.html">Amuse</a>
+  <a href="educate.html">Educate</a>
+  <a href="profile.html">Profile</a>
+  <a href="superhero.html">Super</a>
+  <a class="active" href="search.html">Search</a>
+</div>
+<br>
+<h1>Advanced Search</h1>
+<form action="https://www.google.com/search" method="GET" target="_blank">
+  <fieldset>
+    <label for="genSearch">General Search</label>
+    <input type="radio" name="tbm" id="genSearch" value="" checked>
+    <label for="imgSearch">Image Search</label>
+    <input type="radio" name="tbm" id="imgSearch" value="isch">
+    <label for="vidSearch">Video Search</label>
+    <input type="radio" name="tbm" id="vidSearch" value="vid">
+  </fieldset>
+  <fieldset>
+    <span class="searchLabel">
+      <label for="searchString">Search String</label>
+    </span>
+    <input type="text" name="q" id="searchString" required>
+    <br>
+    <span class="searchLabel">
+      <label for="includeString">Required String</label>
+    </span>
+    <input type="text" name="as_epq" id="includeString">
+    <br>
+    <span class="searchLabel">
+      <label for="excludeString">Excluded String</label>
+    </span>
+    <input type="text" name="as_eq" id="excludeString">
+    <br>
+    <span class="searchLabel">
+      <label for="filetype">Select a Filetype</label>
+    </span>
+    <select name="as_filetype" id="filetype">
+      <option value="">Any Filetype</option>
+      <option value="pdf">General - pdf</option>
+      <option value="doc">General - doc</option>
+      <option value="ppt">General - ppt</option>
+      <option value="rtf">General - rtf</option>
+      <option value="xls">General - rtf</option>
+      <option value="png">Image - png</option>
+      <option value="jpeg">Image - jpeg</option>
+      <option value="gif">Image - gif</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label for="anyTime">Any Time</label>
+    <input type="radio" name="as_qdr" id="anyTime" value="" checked>
+    <label for="lastDay">Last Day</label>
+    <input type="radio" name="as_qdr" id="lastDay" value="d">
+    <label for="lastWeek">Last Week</label>
+    <input type="radio" name="as_qdr" id="lastWeek" value="w">
+    <label for="lastMonth">Last Month</label>
+    <input type="radio" name="as_qdr" id="lastMonth" value="m">
+    <label for="lastYear">Last Year</label>
+    <input type="radio" name="as_qdr" id="lastYear" value="y">
+  </fieldset>
+  <fieldset>
+    <label for="rights">Usage Rights</label>
+    <br>
+    <select name="as_rights" id="rights" size="4">
+      <option selected value="">Any Rights</option>
+      <option value="cc_publicdomain">CC - Public Domain</option>
+      <option value="cc_attribute">CC - Attribute</option>
+      <option value="cc_sharealike">CC - Share Alike</option>
+      <option value="cc_noncommercial">CC - Noncommercial</option>
+      <option value="cc_nonderived">CC - Non Derived</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label for="hidden">Show duplicates?</label>
+    <input type="checkbox" name="filter" id="hidden" value="0">
+    <label for="newWindow">New Windows?</label>
+    <input type="checkbox" name="newwindow" id="newWindow" value="1">
+  </fieldset>
+  <input type="submit" value="Search">
+</form>
+</body>
+</html>

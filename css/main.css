@@ -13,6 +13,7 @@
 .menu {
     background-color: var(--DarkPurple);
     overflow: hidden;
+    margin: -8px;
 }
 
 /* Style the links inside the navigation bar */
@@ -40,6 +41,11 @@
     background-color: var(--LightBluePurple);
     color: black;
     font-weight: bolder;
+}
+
+.searchLabel {
+    display: inline-block;
+    width: 110px;
 }
 
 html, body {
