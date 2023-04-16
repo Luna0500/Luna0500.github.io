@@ -52,6 +52,77 @@ html, body {
     background-color: var(--LightBlueGrey);
 }
 
+body {
+    margin-left: 10px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: var(--DarkPurple);
+    overflow: hidden;
+    margin-left: -10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--LightBlueGrey);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: var(--LightRichPurple);
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* unvisited link */
+.topnav a:link,.topnav a:visited {
+    color: var(--LightBlueGrey);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: var(--LightBluePurple);
+    color: var(--DarkPurple);
+}
+
+/* mouse over link */
+.topnav a:hover {
+    color: var(--DarkPurple);
+}
+
+/* Found video-con rules while trying to fix short video iframes when using width with relative units. */
+/* Using this seems to make the relative units function correctly with YouTube's preset rules */
+/* The source of my issue seemed to be the padding-bottom attribute. */
+/* From the answer here: https://stackoverflow.com/questions/36782207/html-embedded-video-cut-off */
+.video-con {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-con iframe,
+.video-con object,
+.video-con embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -59,7 +130,7 @@ img {
 
 h1 {
     color: var(--DarkPurple);
-    font-size: 38pt;
+    font-size: 8vw;
     font-weight: bold;
 }
 
@@ -90,32 +161,77 @@ a:active {
 }
 
 table {
-    border-collapse: collapse
+    border-collapse: collapse;
+    margin-left: -10px;
+    max-width: 900px;
 }
 
 thead {
-    font-size: 18pt;
+    font-size: 1.5em;
     font-weight: bold;
     background-color: var(--LightRichPurple);
 }
 td a img {
-    height: 100px;
+    max-height: 200px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    object-fit: contain;
 }
 td {
+    font-size: 2vw;
+    min-font-size: 10px;
     padding: 5px;
     border: 3px solid black;
 }
+
+td h5 {
+    font-size: 3vw;
+    min-font-size: 10px;
+}
+
 tbody tr td{
+    font-weight: bold;
     background-color: var(--LightBlue);
 }
 tbody tr td:first-child{
-    font-size: 16pt;
-    font-weight: bold;
     background-color: var(--LightBluePurple);
 }
 table ul {
     padding-left: 15px;
+}
+
+@media all and (max-width: 600px) {
+    .topnav a:not(.active) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media all and (min-width: 900px) {
+    h1 {
+        font-size: 72px;
+    }
+
+    td {
+        font-size: 18px;
+        min-font-size: 10px;
+        padding: 5px;
+        border: 3px solid black;
+    }
+
+    td h5 {
+        font-size: 27px;
+        min-font-size: 10px;
+    }
 }
