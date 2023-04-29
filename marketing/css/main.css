@@ -112,7 +112,7 @@
     }
 }
 
-@media all and (max-width: 1600px) {
+@media all and (max-width: 1300px) {
     .FlexFrame {
         flex-direction: column;
         max-width: 100%;
