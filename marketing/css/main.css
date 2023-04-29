@@ -78,7 +78,7 @@
     border-radius: 5px;
     border: black solid 3px;
     background-color: var(--LightGold);
-    max-width: 42%;
+    max-width: 38%;
     flex-direction: row;
 }
 
