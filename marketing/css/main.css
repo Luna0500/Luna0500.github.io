@@ -68,7 +68,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 5px;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--LightTan);
 }
 
@@ -78,7 +78,7 @@
     border-radius: 5px;
     border: black solid 3px;
     background-color: var(--LightGold);
-    max-width: 49%;
+    max-width: 46%;
     flex-direction: row;
 }
 
@@ -96,7 +96,7 @@
     width: 90%;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1000px) {
     .container-fluid {
         grid-template-columns: auto;
         grid-template-areas:
