@@ -106,6 +106,9 @@
          "Location"
          "Menu";
     }
+}
+
+@media all and (max-width: 1500px) {
     .FlexFrame {
         flex-direction: column;
         max-width: 100%;
